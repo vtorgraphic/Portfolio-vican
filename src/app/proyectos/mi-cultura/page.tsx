@@ -85,7 +85,7 @@ export default function MiCultura() {
   const ctas = [
     { label: "Probar prototipo", href: enlaces.miculturaPrototipo },
     { label: "Ver UI Kit", href: enlaces.miculturaUiKit },
-    { label: "Ver en la App Store", href: enlaces.miculturaAppStore },
+    { label: "Ver en Google Play", href: enlaces.miculturaPlayStore },
   ].filter((c) => c.href);
 
   return (
