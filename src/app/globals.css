@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Tokens del manual de identidad Vican (Figma) */
+@theme {
+  --color-bg: #141414;
+  --color-surface: #252525;
+  --color-surface-2: #1f1f1f;
+  --color-chip: #2e2e2e;
+  --color-accent: #eb0045;
+  --color-accent-dark: #c30438;
+  --color-accent-deep: #77001e;
+  --color-wine: #520113;
+  --color-pink: #ff9a9d;
+  --color-muted: #a3a3a3;
+  --color-line: rgb(255 255 255 / 0.1);
+
+  --font-display: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  background: var(--color-bg);
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-variation-settings: "opsz" 14;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
