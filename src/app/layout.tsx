@@ -42,8 +42,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
-      <body id="top" className={`${dmSans.variable} ${manrope.variable} antialiased`}>
+    <html lang="es" className={`${dmSans.variable} ${manrope.variable}`}>
+      <body id="top" className="font-sans antialiased">
         <Header />
         <main>{children}</main>
         <Footer />

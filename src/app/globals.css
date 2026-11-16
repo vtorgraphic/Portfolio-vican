@@ -13,7 +13,10 @@
   --color-pink: #ff9a9d;
   --color-muted: #a3a3a3;
   --color-line: rgb(255 255 255 / 0.1);
+}
 
+/* Tipografías: DM Sans para títulos, Manrope para textos (cargadas con next/font) */
+@theme inline {
   --font-display: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
@@ -26,7 +29,8 @@ html {
 body {
   background: var(--color-bg);
   color: #fff;
-  font-family: var(--font-sans);
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300; /* Manrope Light para textos de lectura, como en Figma */
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
