@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { Lang } from "@/i18n/config";
+import { ui } from "@/i18n/ui";
 
 /* ---------- Layout ---------- */
 
@@ -166,13 +168,13 @@ export function ArrowIcon({ className = "size-5 lg:size-6", rotate = 0 }: { clas
   );
 }
 
-export function BackLink() {
+export function BackLink({ lang }: { lang: Lang }) {
   return (
     <Link
-      href="/#proyectos"
+      href={`/${lang}#proyectos`}
       className="w-fit text-base font-semibold leading-[1.4] text-muted transition-colors hover:text-white lg:text-lg"
     >
-      ← Volver a proyectos
+      {ui[lang].volver}
     </Link>
   );
 }

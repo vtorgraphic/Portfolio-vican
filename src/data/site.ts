@@ -2,6 +2,7 @@
  * Datos editables del portafolio.
  * Los enlaces vacíos ("") no se muestran en la web: rellénalos cuando los tengas.
  */
+import type { Lang } from "@/i18n/config";
 
 export const contacto = {
   correo: "hellovican@gmail.com",
@@ -28,14 +29,26 @@ export const enlaces = {
 export type Proyecto = {
   slug: string;
   nombre: string;
-  tags: string[];
+  tags: Record<Lang, string[]>;
 };
 
 export const proyectos: Proyecto[] = [
-  { slug: "repe", nombre: "Repe", tags: ["UX/UI", "App móvil"] },
-  { slug: "haditas", nombre: "Haditas", tags: ["Diseño gráfico", "Sitio web"] },
-  { slug: "vigia", nombre: "Vigia", tags: ["UX Research", "Web app y software"] },
-  { slug: "mi-cultura", nombre: "Mi cultura", tags: ["UX Research", "App y software"] },
+  { slug: "repe", nombre: "Repe", tags: { es: ["UX/UI", "App móvil"], en: ["UX/UI", "Mobile app"] } },
+  {
+    slug: "haditas",
+    nombre: "Haditas",
+    tags: { es: ["Diseño gráfico", "Sitio web"], en: ["Graphic design", "Website"] },
+  },
+  {
+    slug: "vigia",
+    nombre: "Vigia",
+    tags: { es: ["UX Research", "Web app y software"], en: ["UX Research", "Web app & software"] },
+  },
+  {
+    slug: "mi-cultura",
+    nombre: "Mi cultura",
+    tags: { es: ["UX Research", "App y software"], en: ["UX Research", "App & software"] },
+  },
 ];
 
 export const colaboraciones = [

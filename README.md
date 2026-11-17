@@ -1,19 +1,29 @@
 # Portafolio Vican · Victor Figueroa
 
 Portafolio de diseño UX/UI y gráfico, construido a partir del prototipo en Figma
-("Portafolio Vican.2026"). Responsive para móvil, tablet y escritorio.
+("Portafolio Vican.2026"). Responsive para móvil, tablet y escritorio, en español e inglés.
 
 **Stack:** Next.js 15 (App Router) · React 19 · Tailwind CSS 4 · TypeScript
 
 ## Páginas
 
+Cada página existe en `/es/...` y `/en/...`. Las rutas sin idioma (`/`, `/proyectos/repe`…)
+redirigen al idioma elegido antes (cookie `lang`), al del navegador o, por defecto, a español.
+
 | Ruta | Contenido |
 | --- | --- |
-| `/` | Hero, proyectos, galería, colaboraciones, quién soy y contacto |
-| `/proyectos/repe` | Caso de estudio Repe |
-| `/proyectos/haditas` | Caso de estudio Haditas |
-| `/proyectos/vigia` | Caso de estudio Vigia |
-| `/proyectos/mi-cultura` | Caso de estudio Mi cultura |
+| `/es`, `/en` | Hero, proyectos, galería, colaboraciones, quién soy y contacto |
+| `/{idioma}/proyectos/repe` | Caso de estudio Repe |
+| `/{idioma}/proyectos/haditas` | Caso de estudio Haditas |
+| `/{idioma}/proyectos/vigia` | Caso de estudio Vigia |
+| `/{idioma}/proyectos/mi-cultura` | Caso de estudio Mi cultura |
+
+## Idiomas
+
+- **Textos de cada página:** `src/content/` (`home.ts`, `repe.ts`, `haditas.ts`, `vigia.ts`, `micultura.ts`).
+  Cada archivo tiene un bloque `es` y otro `en` con la misma estructura.
+- **Textos compartidos** (menú, footer, botones): `src/i18n/ui.ts`.
+- **Selector ES / EN** del header: `src/components/LangSwitch.tsx`.
 
 ## Desarrollo local
 
